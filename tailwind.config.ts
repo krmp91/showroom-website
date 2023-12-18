@@ -16,13 +16,13 @@ const config: Config = {
       darkPurple: "#B4A9A9",
     },
     fontFamily: {
-      sans: ["Georgia", "sans-serif"],
+      sans: ["Open Sans", "sans-serif"],
       serif: ["Merriweather", "serif"],
       display: ["Open Sans"],
     },
     fontSize: {
       sm: "0.8rem",
-      base: "1rem",
+      base: "0.98rem",
       lg: "1.15rem",
       xl: "1.25rem",
       "2xl": "1.563rem",
