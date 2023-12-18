@@ -13,7 +13,7 @@ const config: Config = {
       darkOrange: "#B4832C",
       blueLight: "#F1F3F8",
       lightPink: "#F7EDEC",
-      darkPurple: "#B4A9A9",
+      roseGray: "#B4A9A9",
     },
     fontFamily: {
       sans: ["Open Sans", "sans-serif"],

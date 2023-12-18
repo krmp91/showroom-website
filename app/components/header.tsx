@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross1 } from "react-icons/rx";
-import Logo from "../louise-logo4.png";
+import { Logo } from "../logo";
 
 export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,17 +13,10 @@ export const Header = () => {
 
   return (
     /* Normal skærm opløsning navbar starter her */
-    <nav className="fixed w-full h-18 bg-darkPurple">
-      <div className="flex justify-between item-center f-width px-16 2xl:px-16 mt-10">
+    <nav className=" flex w-full h-24 bg-roseGray">
+      <div className="flex justify-between item-center w-full h-full px-16 2xl:px-16 p-12">
         <Link href="/">
-          <Image
-            src={Logo}
-            alt="Logo"
-            width={200}
-            height={60}
-            className="courser-pointer"
-            priority
-          />
+          <Logo className="fill-black w-60 z-10" />
         </Link>
         <div className="hidden sm:flex">
           <ul className="hidden sm:flex">
@@ -59,7 +52,7 @@ export const Header = () => {
           <RxHamburgerMenu size={22} />
         </div>
         <div
-          className={`fixed top-0 w-[65%] sm:hidden h-screen bg-darkPurple p-10 ease-in duration-500 ${
+          className={`fixed top-0 w-[65%] sm:hidden h-screen bg-roseGray p-10 ease-in duration-500 ${
             menuOpen ? "left-0" : "left-[-100%]"
           }`}
         >
