@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Open Sans", system-ui, sans-serif;
+  }
+  html {
+    font-family: "Open Sans", sans-serif;
+  }
+}
+
+h1 {
+  @apply text-4xl sm:text-6xl;
+}
