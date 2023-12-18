@@ -1,10 +1,19 @@
 import React from "react";
+import Image from "next/image";
+import Logo from "../logo.png";
 
 export const Header = () => {
   return (
     <nav className="fixed w-full h-24 shadow-xl bg-darkPurple">
       <div className="flex justify-between item-center h-full w-full px-4 2xl:px16">
-        <div>left side</div>
+        <Image
+          src={Logo}
+          alt="Logo"
+          width="300"
+          height="20"
+          className="courser-pointer"
+          priority
+        />
         <div>right side</div>
       </div>
     </nav>
