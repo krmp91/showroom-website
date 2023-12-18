@@ -1,19 +1,21 @@
 import React from "react";
 import Image from "next/image";
-import Logo from "../logo.png";
+import Logo from "../louise-logo3.png";
+import Link from "next/link";
 
 export const Header = () => {
   return (
-    <nav className="fixed w-full h-24 shadow-xl bg-darkPurple">
-      <div className="flex justify-between item-center h-full w-full px-4 2xl:px16">
-        <Image
-          src={Logo}
-          alt="Logo"
-          width="300"
-          height="20"
-          className="courser-pointer"
-          priority
-        />
+    <nav className="fixed w-full h-1 shadow-xl bg-darkPurple">
+      <div className="flex justify-between item-center px-14 2xl:px-16">
+        <Link rel="stylesheet" href="/">
+          <Image
+            src={Logo}
+            alt="Logo"
+            width="200"
+            className="courser-pointer"
+            priority
+          />
+        </Link>
         <div>right side</div>
       </div>
     </nav>
