@@ -29,7 +29,7 @@ export const Footer = () => {
           </a>
         </div>
 
-        <span className="font-light italic text-sm inline-block align-bottom pt-3 px-12">
+        <span className="font-light italic text-sm inline-block align-bottom pt-3 px-12 hidden md:block">
           &copy; Louise Ravnløkke 2023
         </span>
       </div>
