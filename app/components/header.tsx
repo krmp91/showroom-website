@@ -14,7 +14,7 @@ export const Header = () => {
   return (
     /* Normal skærm opløsning navbar starter her */
     <nav className=" flex w-full h-24 bg-roseGray">
-      <div className="flex justify-between item-center w-full h-full px-16 2xl:px-16 p-12">
+      <div className="flex justify-between item-center w-full h-full px-16 2xl:px-16 pt-12">
         <Link href="/">
           <Logo className="fill-black w-60 z-10" />
         </Link>
