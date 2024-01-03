@@ -3,7 +3,7 @@ import { Instagram, Linkedin, Mail, ResearchGate } from "../icons";
 
 export const Footer = () => {
   return (
-    <footer className="w-full   bg-blueLight bg-opacity-75 fixed bottom-0">
+    <footer className="w-full   bg-blueLight bg-opacity-75 bottom-0">
       <div className="flex  items-center h-24 justify-between inline-block">
         <div className="flex gap-6 px-36">
           <a href="mailto:l.ravnloekke@gmail.com" aria-label="Email">
