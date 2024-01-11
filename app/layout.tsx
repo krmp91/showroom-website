@@ -25,7 +25,7 @@ export default function RootLayout({
         <Header />
         <main>
           <div className="flex flex-col items-center">
-            <h1 className="text-darkOrange">
+            {/*<h1 className="text-darkOrange">
               CONTENT WILL COME SOON - Stay tuned!
             </h1>
             <div>
@@ -35,7 +35,7 @@ export default function RootLayout({
                 width={949}
                 height={595}
               />
-            </div>
+            </div>*/}
           </div>
           {children}
         </main>

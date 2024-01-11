@@ -11,6 +11,7 @@ const config: Config = {
       black: "#000000",
       darkGreen: "#3A4E55",
       darkOrange: "#B4832C",
+      darkOrangeHover: "#AB7D2C",
       blueLight: "#F1F3F8",
       lightPink: "#F7EDEC",
       roseGray: "#B4A9A9",
@@ -40,8 +41,12 @@ const config: Config = {
       },
       boxShadow: {
         footer: "0px -7px 41px 3px rgba(175, 175, 175, 0.25)",
+        inset: "0 0 10px rgba(0, 0, 0, 0.5)",
+        custom:
+          "-34rem 20px 3px -0px #B4A9A9, 76rem 6px 0px 0px #B4A9A9, 5px 1px 2px 0.5px rgba(000, 000, 000, 0.10)",
       },
       backgroundImage: {
+        parallax: 'url("/images/feel-free-to-reach-out.jpg")',
         header:
           "linear-gradient(98.85deg, #B4A9A9 7.8%, rgba(239, 252, 255, 0) 139.35%);",
       },

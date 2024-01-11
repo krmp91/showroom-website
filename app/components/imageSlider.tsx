@@ -51,7 +51,7 @@ export default function ImageSlider({}: Props) {
                   width={949}
                   src={image.src}
                   alt={`slide ${index + 1}`}
-                  className="rounded h-full w-full transition-all object-cover "
+                  className="h-full w-full transition-all object-cover "
                 />
               </div>
             ) : null}

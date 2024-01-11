@@ -1,12 +1,36 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross1 } from "react-icons/rx";
 import { Logo } from "../logo";
+import "./hover-trigger.css";
 
 export const Header = () => {
+  const currentRoute = usePathname();
+  const navLink = [
+    {
+      name: "Projects",
+      link: "/projects",
+    },
+    {
+      name: "Publications",
+      link: "/publications",
+    },
+    {
+      name: "Teaching",
+      link: "/teaching",
+    },
+    {
+      name: "About",
+      link: "/about",
+    },
+    {
+      name: "Contact",
+      link: "/contact",
+    },
+  ];
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleNav = () => setMenuOpen(!menuOpen);
@@ -18,10 +42,23 @@ export const Header = () => {
         <Link href="/">
           <Logo className="fill-black w-60 z-10" />
         </Link>
-        <div className="hidden sm:flex">
-          <ul className="hidden sm:flex">
+        <div className="hidden sm:flex ">
+          <div className="hidden sm:flex">
+            {navLink.map(({ link, name }) => (
+              <Link
+                key={name}
+                href={link}
+                className={` ${
+                  currentRoute == link ? "underline-trigger" : ""
+                } ml-8 uppercase tracking-wide pb-1 hover-trigger text-base font-light italic`}
+              >
+                {name}
+              </Link>
+            ))}
+          </div>
+          {/*<ul className="hidden sm:flex">
             <Link href="/projects">
-              <li className="ml-8 uppercase tracking wide pb-1 hover:border-b text-base font-light italic">
+              <li className="ml-8 uppercase tracking-wide pb-1 hover:border-b text-base font-light italic">
                 Projects
               </li>
             </Link>
@@ -45,7 +82,7 @@ export const Header = () => {
                 Contact
               </li>
             </Link>
-          </ul>
+          </ul>*/}
         </div>
         {/* mobile burgermenu */}
         <div onClick={handleNav} className="md:hidden cursor-pointer pl-24">
