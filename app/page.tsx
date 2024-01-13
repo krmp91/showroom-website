@@ -1,8 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
-import ImageSlider from "./components/imageSlider";
-import ParallaxContact from "./components/parallaxContact";
-import { DownloadButton } from "./components/downloadButton";
+import ImageSlider from "../components/imageSlider";
+import ParallaxContact from "../components/parallaxContact";
+import { DownloadButton } from "../components/downloadButton";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 const HomePage = () => {
   return (
@@ -14,13 +16,13 @@ const HomePage = () => {
           for well-being and sustainability.
         </h1>
       </div>
-      <div className="mb-40">
+      <div className="mb-40 z-10">
         <ImageSlider />
       </div>
-      <div className="self-start mb-40">
+      <div className="self-start mb-20">
         <DownloadButton />
       </div>
-      <div className="w-full mb-40">
+      <div className="w-full">
         <ParallaxContact />
       </div>
     </div>

@@ -1,0 +1,21 @@
+.hover-trigger:hover::after {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 1px;
+  background-color: currentColor;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5rem;
+}
+
+.underline-trigger::after {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 1px;
+  background-color: currentColor;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5rem;
+}

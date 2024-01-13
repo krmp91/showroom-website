@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import "./global.css";
-import { Footer } from "./components/footer";
-import { Header } from "./components/header";
+import { Footer } from "../components/footer";
+import { Header } from "../components/header";
 import Image from "next/image";
 <style>
   @import
@@ -22,8 +22,8 @@ export default function RootLayout({
     <html lang="en">
       <head />
       <body className="bg-roseGray">
-        <Header />
         <main>
+          <Header />
           <div className="flex flex-col items-center">
             {/*<h1 className="text-darkOrange">
               CONTENT WILL COME SOON - Stay tuned!
