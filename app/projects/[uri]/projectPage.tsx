@@ -1,9 +1,9 @@
 import { Suspense } from "react";
 import Loading from "../../loading";
 
-async function getProject(uri: any) {
+async function getPost(uri) {
   const query = `
-  query GetProjectByUri($uri: ID!) {
+  query GetPostByUri($uri: ID!) {
     post(id: $uri, idType: URI) {
       title
       content
@@ -17,7 +17,7 @@ async function getProject(uri: any) {
   };
 
   const res = await fetch(process.env.NEXT_PUBLIC_GRAPHQL_ENDPOINT, {
-    method: "PROJECTS",
+    method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
@@ -32,12 +32,12 @@ async function getProject(uri: any) {
   if (responseBody && responseBody.data && responseBody.data.post) {
     return responseBody.data.post;
   } else {
-    throw new Error("Failed to fetch the project");
+    throw new Error("Failed to fetch the post");
   }
 }
 
-export default async function ProjectDetails({ params }) {
-  const post = await getProject(params.uri);
+export default async function PostDetails({ params }) {
+  const post = await getPost(params.uri);
 
   return (
     <main>
@@ -45,7 +45,7 @@ export default async function ProjectDetails({ params }) {
         <h1>{post.title}</h1>
       </nav>
       <Suspense fallback={<Loading />}>
-        <div key={post.uri}>
+        <div className="card" key={post.uri}>
           <p dangerouslySetInnerHTML={{ __html: post.content }} />
         </div>
       </Suspense>
