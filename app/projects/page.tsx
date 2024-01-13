@@ -9,7 +9,6 @@ async function getPosts() {
     posts {
       nodes {
         title
-        content
         uri
         featuredImage {
           node {
@@ -47,7 +46,7 @@ async function getPosts() {
   const posts = data.posts.nodes.filter(
     (post: { categories: { nodes: { name: string }[] } }) =>
       post.categories.nodes.some(
-        (category: { name: string }) => category.name === "projects"
+        (category: { name: string }) => category.name === "Projects"
       )
   );
 
@@ -73,11 +72,6 @@ export default async function PostList() {
                   layout="fixed" // or 'fill', depending on your requirement
                 />
               )}
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: post.content.slice(0, 200) + "...",
-                }}
-              />
             </Link>
           </Suspense>
         </div>
