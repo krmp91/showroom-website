@@ -8,15 +8,15 @@ type Props = {};
 const imageDetails = [
   {
     src: "/images/projekteksempel-billede-mending.jpg",
-    text: "Image 1 Description",
+    text: "Garment mending as a care and maintenance practice does not solely have the potential to extend clothing lifespan. Mending can also be seen as a bottom-up approach to altering a clothing culture through creativity and making. This topic is discussed in the conference paper Textile Aesthetic Dialogues of Garment Mending presented at PLATE conference in June 2023.",
   },
   {
     src: "/images/projekteksempel-billede-2-user-cards.jpg",
-    text: "Image 2 Description",
+    text: "User Cards – Understanding Garments and Wear is a collection of cards which introduces a range of methods that fashion designers can use to begin to understand their users which in turn can help them make better circular design choices. ",
   },
   {
     src: "/images/projekteksempel-billede-3-memory-of-crafts.jpg",
-    text: "Image 3 Description",
+    text: "Memory of Textile Crafts is a card game developed as a tool to be used when teaching textile techniques. Through interactive and dialogue-based activities the card game emphasizes active learning in the textile design classroom. The game can be seen as an advanced version of a traditional memory game, where sets or ‘matches’ are to be made. Here matches are of specific textile techniques. ",
   },
 ];
 
@@ -88,11 +88,9 @@ export default function ImageSlider({}: Props) {
           </>
         ))}
       </section>
-      <p className="text-center pt-16">
+      <p className="flex items-center w-[949px] pt-16 font-light">
         {imageDetails[currentImageIndex].text}
       </p>
-      {/*paralax effect with contact button*/}
-      <section></section>
     </div>
   );
 }

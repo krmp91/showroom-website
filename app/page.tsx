@@ -8,9 +8,9 @@ import Loading from "./loading";
 
 const HomePage = () => {
   return (
-    <div className="flex flex-col items-center pt-6 h-screen mb-80 mt-2">
+    <div className="flex flex-col items-center pt-6 h-screen mb-40 mt-2">
       <div className="p-2 px-16 pb-20 self-start">
-        <h1 className="pb-8 text-base italic font-semibold text-darkOrange">
+        <h1 className="pb-8 text-base italic font-semibold text-darkOrange drop-shadow-sm">
           Hi, I'm Louise. I am a designer, researcher, and maker<br></br>{" "}
           exploring participatory practices of textiles and clothing <br></br>
           for well-being and sustainability.
@@ -22,9 +22,8 @@ const HomePage = () => {
       <div className="self-start mb-20">
         <DownloadButton />
       </div>
-      <div className="w-full">
-        <ParallaxContact />
-      </div>
+
+      <ParallaxContact />
     </div>
   );
 };

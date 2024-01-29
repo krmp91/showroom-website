@@ -1,7 +1,26 @@
+import { getPostArchive } from "@/services/project";
 import Link from "next/link";
-import { Suspense } from "react";
-import Loading from "../loading";
-import Image from "next/image";
+
+export default async function ProjectArchive() {
+  const posts = await getPostArchive();
+  return (
+    <main>
+      <h1>Project Archive</h1>
+      <ul>
+        {posts.map((post) => (
+          <li key={post.slug}>
+            {post.title.rendered}
+            <Link href={"/project/" + post.slug}>
+              <p>Read Post</p>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </main>
+  );
+}
+
+/*t Image from "next/image";
 
 async function getPosts() {
   const query = `
@@ -9,7 +28,7 @@ async function getPosts() {
     posts {
       nodes {
         title
-        uri
+        slug
         featuredImage {
           node {
             sourceUrl
@@ -59,9 +78,9 @@ export default async function PostList() {
   return (
     <div>
       {posts.map((post: any) => (
-        <div key={post.uri}>
+        <div key={post.slug}>
           <Suspense fallback={<Loading />}>
-            <Link href={`/post/${post.uri}`}>
+            <Link href={`/projects/${post.slug}`}>
               <h3>{post.title}</h3>
               {post.featuredImage && post.featuredImage.node && (
                 <Image

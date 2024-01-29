@@ -22,10 +22,11 @@ export default function RootLayout({
     <html lang="en">
       <head />
       <body className="bg-roseGray">
-        <main>
+        <div className="min-h-screen flex flex-col relative pb-20">
           <Header />
-          <div className="flex flex-col items-center">
-            {/*<h1 className="text-darkOrange">
+          <main className="relative">
+            {/*<div className="flex flex-col items-center">
+              <h1 className="text-darkOrange">
               CONTENT WILL COME SOON - Stay tuned!
             </h1>
             <div>
@@ -35,11 +36,14 @@ export default function RootLayout({
                 width={949}
                 height={595}
               />
-            </div>*/}
+            </div>
+  </div>*/}
+            {children}
+          </main>
+          <div className="">
+            <Footer />
           </div>
-          {children}
-        </main>
-        <Footer />
+        </div>
       </body>
     </html>
   );

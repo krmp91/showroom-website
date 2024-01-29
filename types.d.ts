@@ -1,4 +1,4 @@
-type CategoryNode = {
+/*type CategoryNode = {
   name: string;
 };
 
@@ -26,4 +26,4 @@ type Posts = {
       nodes: PostNode[];
     };
   };
-};
+};*/
